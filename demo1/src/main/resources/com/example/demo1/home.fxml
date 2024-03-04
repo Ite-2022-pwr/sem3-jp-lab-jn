@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="556.0" prefWidth="967.0" style="-fx-background-color: #1faa83;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo1.logic.controllers.HomeController">
+   <children>
+      <VBox alignment="TOP_CENTER" layoutX="14.0" layoutY="3.0" prefHeight="556.0" prefWidth="201.0">
+         <children>
+            <ImageView fitHeight="105.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/logo.png" />
+               </image>
+            </ImageView>
+            <HBox alignment="TOP_CENTER" prefHeight="55.0" prefWidth="201.0" style="-fx-padding: 10 0 0 0;">
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin>
+               <children>
+                  <Button mnemonicParsing="false" onAction="#homePageOnClick" style="-fx-background-color: #1faa83;" text="Strona główna" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Button>
+               </children>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </HBox>
+            <HBox alignment="TOP_CENTER" prefHeight="55.0" prefWidth="201.0" style="-fx-padding: 10 0 0 0;">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#productPageOnClick" style="-fx-background-color: #1faa83;" text="Produkty" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Button>
+               </children>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </HBox>
+            <HBox alignment="TOP_CENTER" prefHeight="55.0" prefWidth="201.0" style="-fx-padding: 10 0 0 0;">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#dishPageOnClick" style="-fx-background-color: #1faa83;" text="Posiłki" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Button>
+               </children>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </HBox>
+            <HBox alignment="TOP_CENTER" prefHeight="55.0" prefWidth="201.0" style="-fx-padding: 10 0 0 0;">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#shoppingPageOnClick" style="-fx-background-color: #1faa83;" text="Zakupy" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Button>
+               </children>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </HBox>
+         </children>
+      </VBox>
+      <VBox alignment="CENTER" layoutX="203.0" layoutY="16.0" prefHeight="530.0" prefWidth="752.0" style="-fx-background-color: white; -fx-border-radius: 25; -fx-background-radius: 25;">
+         <children>
+            <Label text="Witamy w Diet.io" textAlignment="CENTER">
+               <font>
+                  <Font size="43.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="20.0" />
+               </VBox.margin>
+            </Label>
+            <HBox alignment="CENTER" prefHeight="152.0" prefWidth="692.0">
+               <VBox.margin>
+                  <Insets left="30.0" right="30.0" />
+               </VBox.margin>
+               <children>
+                  <VBox alignment="BOTTOM_LEFT" prefHeight="140.0" prefWidth="175.0" style="-fx-background-color: #7CB4B8; -fx-border-radius: 20; -fx-background-radius: 20;">
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#productPageOnClick" style="-fx-background-color: #7CB4B8;" text="Produkty" textAlignment="CENTER" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="20.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets bottom="20.0" left="20.0" />
+                           </VBox.margin>
+                        </Button>
+                     </children>
+                     <HBox.margin>
+                        <Insets right="30.0" />
+                     </HBox.margin>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </VBox>
+                  <VBox alignment="BOTTOM_LEFT" prefHeight="140.0" prefWidth="175.0" style="-fx-background-color: #F46036; -fx-border-radius: 20; -fx-background-radius: 20;">
+                     <HBox.margin>
+                        <Insets right="20.0" />
+                     </HBox.margin>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#productPageOnClick" style="-fx-background-color: #F46036;" text="Posiłki" textAlignment="CENTER" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="20.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets bottom="20.0" left="20.0" />
+                           </VBox.margin>
+                        </Button>
+                     </children>
+                  </VBox>
+                  <VBox alignment="BOTTOM_LEFT" prefHeight="140.0" prefWidth="175.0" style="-fx-background-color: #8657B8; -fx-border-radius: 20; -fx-background-radius: 20;">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#shoppingPageOnClick" style="-fx-background-color: #8657B8;" text="Zakupy" textAlignment="CENTER" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="20.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets bottom="20.0" left="20.0" />
+                           </VBox.margin>
+                        </Button>
+                     </children>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </VBox>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

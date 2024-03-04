@@ -1,0 +1,14 @@
+.product-div{
+    -fx-background-color:white;
+    -fx-padding: 10 10 10 10;
+    -fx-background-radius: 20;
+}
+
+.active{
+    -fx-opacity: 1;
+}
+
+.inactive{
+    -fx-opacity: 0;
+}
+

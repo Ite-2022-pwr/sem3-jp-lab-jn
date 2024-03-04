@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="556.0" prefWidth="967.0" style="-fx-background-color: #1faa83;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo1.logic.controllers.EditDishController">
+    <children>
+        <VBox layoutX="203.0" layoutY="16.0" prefHeight="530.0" prefWidth="752.0" style="-fx-background-color: white; -fx-border-radius: 25; -fx-background-radius: 25;">
+            <children>
+                <Label text="Edytuj posiłek">
+                    <font>
+                        <Font size="40.0" />
+                    </font>
+                    <VBox.margin>
+                        <Insets left="20.0" top="20.0" />
+                    </VBox.margin>
+                </Label>
+                <VBox prefHeight="373.0" prefWidth="752.0">
+                    <VBox.margin>
+                        <Insets />
+                    </VBox.margin>
+                    <padding>
+                        <Insets bottom="10.0" left="10.0" right="20.0" />
+                    </padding>
+                    <children>
+                        <HBox id="errorContainer" fx:id="errorContainer" alignment="CENTER" prefHeight="34.0" prefWidth="418.0" style="-fx-background-color: #E75757; -fx-background-radius: 20;" visible="false">
+                            <children>
+                                <Label id="errorMessage" fx:id="errorMessage" text="Wiadomość błędu" textFill="WHITE">
+                                    <font>
+                                        <Font size="15.0" />
+                                    </font>
+                                </Label>
+                            </children>
+                        </HBox>
+                        <HBox fx:id="errorContainer" alignment="CENTER" prefHeight="51.0" prefWidth="222.0" style="-fx-background-color: #E75757; -fx-border-radius: 20; -fx-background-radius: 20;" visible="false">
+                            <VBox.margin>
+                                <Insets right="500.0" />
+                            </VBox.margin>
+                            <children>
+                                <Text fx:id="errorMessage1" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
+                                    <font>
+                                        <Font size="16.0" />
+                                    </font>
+                                </Text>
+                            </children>
+                        </HBox>
+                        <TextField fx:id="nameInput" alignment="TOP_LEFT" editable="false" prefHeight="25.0" prefWidth="442.0" promptText="Nazwa posiłku" style="-fx-background-radius: 20;">
+                            <VBox.margin>
+                                <Insets right="500.0" top="20.0" />
+                            </VBox.margin>
+                        </TextField>
+                        <ChoiceBox fx:id="categorySelect" prefHeight="25.0" prefWidth="223.0" style="-fx-background-radius: 20;">
+                            <VBox.margin>
+                                <Insets right="100.0" top="20.0" />
+                            </VBox.margin>
+                        </ChoiceBox>
+                        <HBox alignment="CENTER_LEFT" prefHeight="35.0" prefWidth="732.0" style="-fx-background-color: #4684E2; -fx-background-radius: 20;">
+                            <children>
+                                <Label text="Nazwa produktu" textFill="WHITE">
+                                    <font>
+                                        <Font size="15.0" />
+                                    </font>
+                                    <HBox.margin>
+                                        <Insets left="20.0" />
+                                    </HBox.margin>
+                                </Label>
+                                <Label text="Węglowodany" textFill="WHITE">
+                                    <font>
+                                        <Font size="15.0" />
+                                    </font>
+                                    <HBox.margin>
+                                        <Insets left="60.0" />
+                                    </HBox.margin>
+                                </Label>
+                                <Label text="Tłuszcze" textFill="WHITE">
+                                    <font>
+                                        <Font size="15.0" />
+                                    </font>
+                                    <HBox.margin>
+                                        <Insets left="30.0" />
+                                    </HBox.margin>
+                                </Label>
+                                <Label text="Białko" textFill="WHITE">
+                                    <font>
+                                        <Font size="15.0" />
+                                    </font>
+                                    <HBox.margin>
+                                        <Insets left="30.0" />
+                                    </HBox.margin>
+                                </Label>
+                                <Label text="Kategoria" textFill="WHITE">
+                                    <font>
+                                        <Font size="15.0" />
+                                    </font>
+                                    <HBox.margin>
+                                        <Insets left="30.0" />
+                                    </HBox.margin>
+                                </Label>
+                            </children>
+                            <VBox.margin>
+                                <Insets top="20.0" />
+                            </VBox.margin>
+                        </HBox>
+                        <ScrollPane prefHeight="187.0" prefWidth="722.0" style="-fx-background-radius: 20; -fx-border-radius: 20;">
+                            <VBox.margin>
+                                <Insets top="10.0" />
+                            </VBox.margin>
+                            <content>
+                                <VBox fx:id="productScrollContainer" prefHeight="223.0" prefWidth="719.0" />
+                            </content>
+                            <padding>
+                                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                            </padding>
+                        </ScrollPane>
+                    </children>
+                </VBox>
+                <Button mnemonicParsing="false" onAction="#submitForm" style="-fx-background-color: #4ECEBF; -fx-background-radius: 20;" text="Edytuj" textFill="WHITE">
+                    <font>
+                        <Font size="17.0" />
+                    </font>
+                    <VBox.margin>
+                        <Insets left="20.0" top="20.0" />
+                    </VBox.margin>
+                    <cursor>
+                        <Cursor fx:constant="OPEN_HAND" />
+                    </cursor>
+                </Button>
+            </children>
+        </VBox>
+        <VBox alignment="TOP_CENTER" layoutY="3.0" prefHeight="556.0" prefWidth="201.0">
+            <children>
+                <ImageView fitHeight="105.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@img/logo.png" />
+                    </image>
+                </ImageView>
+                <HBox alignment="TOP_CENTER" prefHeight="55.0" prefWidth="201.0" style="-fx-padding: 10 0 0 0;">
+                    <VBox.margin>
+                        <Insets top="20.0" />
+                    </VBox.margin>
+                    <children>
+                        <Button mnemonicParsing="false" onAction="#homePageOnClick" style="-fx-background-color: #1faa83;" text="Strona główna" textAlignment="CENTER" textFill="WHITE">
+                            <font>
+                                <Font name="System Bold" size="20.0" />
+                            </font>
+                        </Button>
+                    </children>
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                </HBox>
+                <HBox alignment="TOP_CENTER" prefHeight="55.0" prefWidth="201.0" style="-fx-padding: 10 0 0 0;">
+                    <children>
+                        <Button mnemonicParsing="false" onAction="#productPageOnClick" style="-fx-background-color: #1faa83;" text="Produkty" textAlignment="CENTER" textFill="WHITE">
+                            <font>
+                                <Font name="System Bold" size="20.0" />
+                            </font>
+                        </Button>
+                    </children>
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                </HBox>
+                <HBox alignment="TOP_CENTER" prefHeight="55.0" prefWidth="201.0" style="-fx-padding: 10 0 0 0;">
+                    <children>
+                        <Button mnemonicParsing="false" onAction="#dishPageOnClick" style="-fx-background-color: #1faa83;" text="Posiłki" textAlignment="CENTER" textFill="WHITE">
+                            <font>
+                                <Font name="System Bold" size="20.0" />
+                            </font>
+                        </Button>
+                    </children>
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                </HBox>
+                <HBox alignment="TOP_CENTER" prefHeight="55.0" prefWidth="201.0" style="-fx-padding: 10 0 0 0;">
+                    <children>
+                        <Button mnemonicParsing="false" onAction="#shoppingPageOnClick" style="-fx-background-color: #1faa83;" text="Zakupy" textAlignment="CENTER" textFill="WHITE">
+                            <font>
+                                <Font name="System Bold" size="20.0" />
+                            </font>
+                        </Button>
+                    </children>
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                </HBox>
+            </children>
+        </VBox>
+    </children>
+</AnchorPane>
